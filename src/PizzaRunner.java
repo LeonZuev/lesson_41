@@ -22,6 +22,7 @@ public class PizzaRunner {
 
     int max = Integer.parseInt(args[0]); // преобразуем строку в число, кладём в начало массива(?)
     int maxValue = max;
+    Pizza.setMaxValue(500);
 
     System.out.print("Введите количество пицц: ");
     int n = Integer.parseInt(br.readLine());
