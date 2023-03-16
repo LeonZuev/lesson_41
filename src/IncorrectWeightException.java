@@ -13,3 +13,8 @@ public class IncorrectWeightException extends IllegalArgumentException {
     super("Вес не может быть отрицательным: [" + weight + "]");
   }
 }
+  class MaxWeightException extends IllegalArgumentException {
+  public MaxWeightException(int weight, int MAX_VALUE) {
+    super("Размер превышает " + MAX_VALUE + " . Ваш размер: [" + weight + "]");
+  }
+}

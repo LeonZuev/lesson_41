@@ -3,8 +3,8 @@ public class Pizza {
   /*
   + Добавьте классу Pizza приватный статический атрибут -
   + максимально возможный вес пиццы.
-  Добавьте классу Pizza публичный статический метод (сеттер)
-  для изменения этого атрибута.
+  + Добавьте классу Pizza публичный статический метод (сеттер)
+  + для изменения этого атрибута.
   При запуске программы PizzaRunner.java должна быть возможность:
   запустить программу как раньше, без аргументов,
   тогда ограничения нет (Или есть? подсказка: Integer.MAX_VALUE).
@@ -18,7 +18,11 @@ public class Pizza {
   private String title;
 
   private int weight;
-  private static int MAX_VALUE = 500;
+  private static int MAX_VALUE = 600;
+  public  void setMaxValue(int MAX_VALUE) {
+    this.MAX_VALUE = MAX_VALUE;
+  }
+
 
   public Pizza(String title, int weight) {
     this.title = title;
@@ -31,7 +35,7 @@ public class Pizza {
     if (weight <= 0) {
       throw new IncorrectWeightException(weight);
     } else if ( weight > MAX_VALUE) {
-      throw new /*TODO custom exception*/(weight);
+      throw new MaxWeightException(weight, MAX_VALUE);
     }
     this.weight = weight;
   }
