@@ -5,9 +5,23 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class PizzaRunner {
+  /*
+   При запуске программы PizzaRunner.java должна быть возможность:
+  запустить программу как раньше, без аргументов,
+  тогда ограничения нет (Или есть? подсказка: Integer.MAX_VALUE).
+  запустить программу с одним аргументом командной строки:
+  целым числом. Тогда именно это целое число и будет
+  максимально возможным весом пиццы (в граммах).
+  Вы также можете проверить параметр командной строки на корректность и использовать
+  IncorrectWeightException из задачи 1 в случае некорректного запуска программы.
+   */
+
 
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+    int max = Integer.parseInt(args[0]); // преобразуем строку в число, кладём в начало массива(?)
+    int maxValue = max;
 
     System.out.print("Введите количество пицц: ");
     int n = Integer.parseInt(br.readLine());

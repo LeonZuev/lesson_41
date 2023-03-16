@@ -18,9 +18,9 @@ public class Pizza {
   private String title;
 
   private int weight;
-  private static int MAX_VALUE = 600;
-  public  void setMaxValue(int MAX_VALUE) {
-    this.MAX_VALUE = MAX_VALUE;
+  private static int maxValue = 600;
+  public  void setMaxValue(int maxValue) {
+    this.maxValue = maxValue;
   }
 
 
@@ -34,8 +34,8 @@ public class Pizza {
 
     if (weight <= 0) {
       throw new IncorrectWeightException(weight);
-    } else if ( weight > MAX_VALUE) {
-      throw new MaxWeightException(weight, MAX_VALUE);
+    } else if ( weight > maxValue) {
+      throw new MaxWeightException(weight, maxValue);
     }
     this.weight = weight;
   }

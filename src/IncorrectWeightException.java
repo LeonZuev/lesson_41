@@ -4,9 +4,9 @@
 + Добавьте ему конструктор, в который можно передавать одно целое число.
 + При этом супер-класс IllegalArgumentException должен создаваться
 + с сообщением об ошибке вида "Вес не может быть отрицательным: [некоректный вес]"
-Дополните файл Pizza.java из классной работы,
-выбросив в конструкторе исключение IncorrectWeightException
-при попытке создать пиццу с отрицательной массой.
++ Дополните файл Pizza.java из классной работы,
++ выбросив в конструкторе исключение IncorrectWeightException
++ при попытке создать пиццу с отрицательной массой.
  */
 public class IncorrectWeightException extends IllegalArgumentException {
   public IncorrectWeightException(int weight) {
@@ -15,8 +15,8 @@ public class IncorrectWeightException extends IllegalArgumentException {
 }
 
 class MaxWeightException extends IllegalArgumentException {
-  public MaxWeightException(int weight, int MAX_VALUE) {
-    super(String.format("Максимальный вес пиццы: [%d] грамм. Ваш размер: [%s] грамм", MAX_VALUE,
+  public MaxWeightException(int weight, int maxValue) {
+    super(String.format("Максимальный вес пиццы: [%d] грамм. Ваш вес: [%s] грамм", maxValue,
             weight));
   }
 }
