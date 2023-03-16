@@ -13,8 +13,10 @@ public class IncorrectWeightException extends IllegalArgumentException {
     super("Вес не может быть отрицательным: [" + weight + "]");
   }
 }
-  class MaxWeightException extends IllegalArgumentException {
+
+class MaxWeightException extends IllegalArgumentException {
   public MaxWeightException(int weight, int MAX_VALUE) {
-    super("Размер превышает " + MAX_VALUE + " . Ваш размер: [" + weight + "]");
+    super(String.format("Максимальный вес пиццы: [%d] грамм. Ваш размер: [%s] грамм", MAX_VALUE,
+            weight));
   }
 }
