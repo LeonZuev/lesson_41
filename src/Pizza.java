@@ -1,8 +1,8 @@
 public class Pizza {
 
   /*
-  Добавьте классу Pizza приватный статический атрибут -
-  максимально возможный вес пиццы.
+  + Добавьте классу Pizza приватный статический атрибут -
+  + максимально возможный вес пиццы.
   Добавьте классу Pizza публичный статический метод (сеттер)
   для изменения этого атрибута.
   При запуске программы PizzaRunner.java должна быть возможность:
@@ -16,7 +16,9 @@ public class Pizza {
    */
 
   private String title;
+
   private int weight;
+  private static int MAX_VALUE = 500;
 
   public Pizza(String title, int weight) {
     this.title = title;
@@ -25,8 +27,11 @@ public class Pizza {
     выбросив в конструкторе исключение IncorrectWeightException
     при попытке создать пиццу с отрицательной массой.
      */
-    if (weight < 0){
+
+    if (weight <= 0) {
       throw new IncorrectWeightException(weight);
+    } else if ( weight > MAX_VALUE) {
+      throw new /*TODO custom exception*/(weight);
     }
     this.weight = weight;
   }
